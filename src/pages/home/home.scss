@@ -1,3 +1,41 @@
 page-home {
+    .post--pet {
+        position: relative;
 
+        .paw-icon {
+            position: absolute;
+            top: 13px;
+            right: 15px;
+            font-size: 40px;
+            color: #ddd;
+
+            &.active {
+                color: deepskyblue;
+            }
+        }
+    }
+
+    .grid--card-buttons {
+        padding: 0;
+        margin: 0;
+
+        .col, button {
+            padding: 0;
+            margin: 0;
+            height: 45px;
+        }
+
+        button {
+            background: deepskyblue;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100%;
+        }
+    }
+
+    .button--favorite {
+        &.active {
+            color: red;
+        }
+    }
 }

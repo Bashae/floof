@@ -1,3 +1,43 @@
 page-profile {
+    .grid {
+        padding: 0;
+    }
+    
+    .grid--followers {
+        h1 {
+            font-size: 16px;
+            margin-top: 1rem;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        h2 {
+            font-size: 13px;
+            text-align: right;
+        }
 
+        .col {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    .button__layout {
+        background: #eee;
+        box-shadow: none;
+        color: #333;
+        height: 55px;
+        width: 100%;
+
+        &.active {
+            background: rgb(206, 206, 206);
+        }
+    }
+
+    .col {
+        padding: 0;
+        button {
+            border-radius: 0;
+            margin: 0;
+        }
+    }
 }

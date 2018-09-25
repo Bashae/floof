@@ -1,0 +1,38 @@
+app-header {
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Kaushan+Script|Pacifico');
+    padding-bottom: 20px;
+
+    .grid--header {
+        text-align: center;
+
+        ion-icon {
+            color: #fff;
+            font-size: 26px;
+            background: rgb(0, 148, 197);
+            padding: 6px 9px;
+            border-radius: 50%;
+        }
+
+        .toolbar-title {
+            color: #fff;
+            font-size: 30px;
+            font-family: 'Indie Flower', cursive;
+            // font-family: 'Pacifico', cursive;
+            // font-family: 'Kaushan Script', cursive;
+        }
+    }
+
+    .button--power {
+        &.active {
+            color: yellow;
+        }
+    }
+
+    .toolbar-background {
+        background: deepskyblue;
+    }
+}
+
+.ion-page > ion-content {
+    margin-top: 75px;
+}
