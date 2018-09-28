@@ -8,7 +8,7 @@ export class UserProvider {
   userCollection: AngularFirestoreCollection<any>;
   users: Observable<any[]>;
   user: AngularFirestoreDocument;
-  userInfo: Observable;
+  // userInfo: Observable<any>;
 
   constructor(
     public afs: AngularFirestore,
@@ -24,6 +24,8 @@ export class UserProvider {
   }
 
   setUser(userId) {
+    if(!userId)
+      return false;
     let userQuery = this.getUser(userId);
     userQuery.then(res => {
       res.forEach(user => {

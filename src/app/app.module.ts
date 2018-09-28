@@ -21,6 +21,7 @@ import { AppHeaderComponent } from '../components/app-header/app-header';
 import { LoginPage } from '../pages/login/login';
 import { NewPostPage } from '../pages/new-post/new-post';
 import { UserProvider } from '../providers/user/user';
+import { CommentProvider } from '../providers/comment/comment';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyD_GxRelXFpRb8FqAcl-_tdNCqmK81HfWM",
@@ -66,6 +67,7 @@ export const firebaseConfig = {
     SplashScreen,
     UserProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CommentProvider,
   ]
 })
 export class AppModule {}
