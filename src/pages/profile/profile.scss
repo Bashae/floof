@@ -5,13 +5,13 @@ page-profile {
     
     .grid--followers {
         h1 {
-            font-size: 16px;
+            font-size: 14px;
             margin-top: 1rem;
             margin-bottom: 5px;
             text-align: left;
         }
         h2 {
-            font-size: 13px;
+            font-size: 14px;
             text-align: right;
         }
 
@@ -19,6 +19,27 @@ page-profile {
             padding-left: 25px;
             padding-right: 25px;
         }
+    }
+
+    .user_info {
+        padding-left: 0;
+
+        .item-inner {
+            padding-left: 10px;
+        }
+    }
+
+    .user_name {
+        font-size: 18px;
+    }
+
+    .user_image {
+        border-radius: 50%;
+    }
+
+    .user_description {
+        width: 100%;
+        margin-top: 4px;
     }
 
     .button__layout {
@@ -39,5 +60,15 @@ page-profile {
             border-radius: 0;
             margin: 0;
         }
+    }
+
+    .post-list {
+        
+    }
+
+    .button--follow {
+        background: deepskyblue;
+        height: 3rem !important;
+        margin-top: 5px !important;
     }
 }

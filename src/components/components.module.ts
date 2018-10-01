@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PostComponent } from './post/post';
-import { AppHeaderComponent } from './app-header/app-header';
 import { CommentsComponent } from './comments/comments';
 import { CommentComponent } from './comment/comment';
+import { CommonModule } from '@angular/common';
 @NgModule({
 	declarations: [PostComponent,
-    AppHeaderComponent,
     CommentsComponent,
     CommentComponent],
-	imports: [],
+	imports: [CommonModule],
 	exports: [PostComponent,
-    AppHeaderComponent,
     CommentsComponent,
-    CommentComponent]
+    CommentComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ComponentsModule {}

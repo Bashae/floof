@@ -5,12 +5,17 @@ app-header {
     .grid--header {
         text-align: center;
 
+        ion-col {
+            padding: 0;
+        }
+
         ion-icon {
             color: #fff;
             font-size: 26px;
-            background: rgb(0, 148, 197);
             padding: 6px 9px;
-            border-radius: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .toolbar-title {
@@ -24,7 +29,7 @@ app-header {
 
     .button--power {
         &.active {
-            color: yellow;
+            color: rgb(0, 148, 197);
         }
     }
 
@@ -34,5 +39,5 @@ app-header {
 }
 
 .ion-page > ion-content {
-    margin-top: 75px;
+    margin-top: 45px;
 }

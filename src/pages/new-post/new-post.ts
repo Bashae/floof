@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NewPostPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LeaderboardPage } from '../../pages/leaderboard/leaderboard';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'new-post.html',
 })
 export class NewPostPage {
+  tab1: any = LeaderboardPage;
+  tab2: any = LeaderboardPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private camera: Camera
+  ) {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewPostPage');
+    // this.camera.getPicture(options).then((imageData) => {
+    //   // imageData is either a base64 encoded string or a file URI
+    //   // If it's base64 (DATA_URL):
+    //   let base64Image = 'data:image/jpeg;base64,' + imageData;
+    //   console.log(base64Image);
+    // }, (err) => {
+    //   // Handle error
+    // });
   }
 
 }

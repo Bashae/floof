@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-card class="post--pet">
+  <!-- <ion-card class="post--pet">
     <ion-item (click)="goToUserProfile()">
       <ion-avatar item-start>
         <img src="https://firebasestorage.googleapis.com/v0/b/floof-3b8b4.appspot.com/o/doge.jpg?alt=media&token=8892304c-3139-46ef-bb2a-e92822d3f08e">
@@ -34,5 +34,47 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-card>
+  </ion-card> -->
+
+  <ion-card class="post--pet" *ngFor="let post of posts">
+      <ion-item (click)="goToUserProfile(post.owner_id)">
+        <!-- need owner_id to search for profile info -->
+        <ion-avatar item-start>
+          <img src="https://firebasestorage.googleapis.com/v0/b/floof-3b8b4.appspot.com/o/doge.jpg?alt=media&token=8892304c-3139-46ef-bb2a-e92822d3f08e">
+          <!-- User/Owner Image would go here -->
+        </ion-avatar>
+        <h2>{{ post.owner_name }}</h2>
+        <p>1h ago</p>
+        <!-- timestamp would go here -->
+      </ion-item>
+      <ion-icon class="paw-icon" name="paw" (click)="isClicked = !isClicked" [class.active]="isClicked"></ion-icon>
+    
+      <img src="https://firebasestorage.googleapis.com/v0/b/floof-3b8b4.appspot.com/o/doge.jpg?alt=media&token=8892304c-3139-46ef-bb2a-e92822d3f08e" (click)="tapPost()" alt="">
+      <!-- Actual post image would go here -->
+      <ion-card-content style="text-align:center;">
+        <p>{{ post.description }}</p>
+        <p>#text #thing #test</p>
+      </ion-card-content>
+      <ion-grid class="grid--card-buttons">
+        <ion-row>
+          <ion-col col-3>
+            <button ion-button icon-only class="button--favorite" [class.active]="isFavorite" (click)="favoritePost()">
+              <ion-icon name="star"></ion-icon>
+            </button> 
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button icon-only class="button--comment" (click)="openComments()">
+              <ion-icon name="chatboxes"></ion-icon> 153
+              <!-- Actual Comment Count would go here -->
+            </button>
+          </ion-col>
+          <ion-col col-3>
+            <button ion-button icon-only class="button--share" (click)="sharePost()">
+              <ion-icon name="share"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <comments></comments>
+    </ion-card>
 </ion-content>
