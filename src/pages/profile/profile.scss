@@ -4,15 +4,14 @@ page-profile {
     }
     
     .grid--followers {
+        text-align: center;
         h1 {
             font-size: 14px;
             margin-top: 1rem;
             margin-bottom: 5px;
-            text-align: left;
         }
         h2 {
             font-size: 14px;
-            text-align: right;
         }
 
         .col {
@@ -31,6 +30,7 @@ page-profile {
 
     .user_name {
         font-size: 18px;
+        text-align: center;
     }
 
     .user_image {
@@ -40,6 +40,7 @@ page-profile {
     .user_description {
         width: 100%;
         margin-top: 4px;
+        text-align: center;
     }
 
     .button__layout {
